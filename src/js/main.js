@@ -6,6 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = form.querySelector('.step-slider__navigation-next');
     const prevBtn = form.querySelector('.step-slider__navigation-prev');
     const submitBtn = form.querySelector('.step-slider__navigation-next');
+    const pagination = document.getElementById('step_slider_pagination')
+
+    let currentStep = 0;
+
+    paginationSliderCreate();
+
+    const paginationItems = document.querySelectorAll('.step-slider__pagination__item');
+
 
     // Визначаємо функції валідації
     const validatePassword = pass => {
@@ -23,8 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const validateLocation = location => {
         return location.length > 2;
     }
-
-    let currentStep = 0;
 
     // Функція для відображення помилок
     const validateStep = () => {
@@ -128,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // console.log(new PaginationProgress(currentStep).currentSteps)
+        paginationItems[currentStep].classList.add('active');
     }
 
     // Функція переходу до минулого кроку
@@ -141,8 +147,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             emptyControlsListen();
             submitButtonStyle();
+
+            paginationItems[currentStep + 1].classList.remove('active');
         }
-        // console.log(new PaginationProgress(currentStep).currentSteps)
     }
 
     // Підписка на кліки по кнопках Next
@@ -173,5 +180,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const target = control.target ? control.target : control;
 
         target.value ? steps[currentStep].classList.remove(clas) : steps[currentStep].classList.add(clas);
+    }
+
+
+    function paginationSliderCreate() {
+        steps.forEach((step, index) => {
+            const paginationItem = document.createElement('li');
+            paginationItem.classList.add('step-slider__pagination__item');
+            if(index === currentStep) {
+                paginationItem.classList.add('active');
+            }
+
+            pagination.appendChild(paginationItem);
+        });
     }
 });
