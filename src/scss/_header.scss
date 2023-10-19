@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 34px;
+  position: fixed;
+  width: 100%;
+  max-width: 960px;
+
+  &__form {
+
+    .form {
+      display: flex;
+      gap: 12px;
+    }
+  }
+}

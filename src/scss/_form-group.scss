@@ -1,0 +1,115 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+
+  &__control {
+    background: var(--form-control-bg);
+    border: 0;
+    color: var(--form-control-text);
+    border-radius: 5px;
+    font-family: var(--font-secondary);
+    font-weight: bold;
+    padding: 0 14px;
+    font-size: 14px;
+    height: var(--form-control-input-height);
+    min-width: 190px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--form-control-text)
+    }
+  }
+
+  &__link {
+    font-size: 11px;
+    color: var(--form-control-link-color);
+    margin-top: 5px;
+  }
+
+  &__btn {
+    height: var(--form-control-btn-height);
+    min-width: 80px;
+    border: 0;
+    border-radius: 5px;
+    color: var(--form-control-btn-color);
+    transition: 300ms linear;
+    cursor: pointer;
+    background: none;
+    font-family: var(--font-secondary);
+    font-weight: bold;
+
+    &--gradient {
+      background: linear-gradient(61deg, #5866ea, #2ba0ea);
+
+      &:hover {
+        box-shadow: 1px 1px 17px 0 transparentize(#2ba0ea, 0.34);
+      }
+    }
+  }
+
+  &__error {
+    background: var(--color-error);
+    color: #fff;
+    min-height: 40px;
+    display: none;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    bottom: -25px;
+    width: 100%;
+    justify-content: center;
+
+    &--show {
+      display: flex;
+    }
+
+    span {
+      padding: 5px 11px;
+      display: block;
+    }
+  }
+
+  &__message {
+    display: none;
+    font-family: var(--font-primary);
+    color: transparentize(#fff, 0.5);
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    text-align: center;
+
+    &--show {
+      display: block;
+    }
+  }
+
+  select {
+    --webkit-ppearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("../images/select.svg") no-repeat right 20px center #ffffff;
+    border: 0;
+    height: 56px;
+    text-align: center;
+    font-family: var(--font-primary);
+    font-size: 18px;
+    color: var(--color-primary);
+    font-weight: 400;
+    border-radius: 5px;
+  }
+
+}

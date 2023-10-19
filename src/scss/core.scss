@@ -1,0 +1,41 @@
+@use "sass:math";
+
+@import "reset";
+@import "vars";
+@import "fonts";
+
+@import "header";
+@import "app";
+@import "form-group";
+@import "step-slider";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--color-primary);
+  font-size: 16px;
+
+  *, & {
+    font-family: var(--font-primary)
+  }
+
+  h1 {
+    font-size: 37.88px;
+    font-family: var(--font-title);
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--color-title);
+    letter-spacing: -0.5px;
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: 300;
+    font-family: var(--font-title);
+    letter-spacing: 3.3px;
+    color: var(--color-text);
+    margin-top: 12px;
+  }
+}

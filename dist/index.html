@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" content="application/javascript">
+    <title>Test task</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/core.min.css">
+</head>
+<body class="app app--home-page">
+<div class="app-container">
+    <header class="header">
+        <a href="/" class="header__logo"><img src="images/logo.svg" alt=""></a>
+        <div class="header__form">
+            <form action="" method="post" class="form">
+                <label class="form-group">
+                    <input class="form-group__control" type="email" placeholder="Email" required>
+                    <span class="form-group__error"><span>Please enter a valid email address</span></span>
+                </label>
+                <label class="form-group">
+                    <input class="form-group__control" type="password" placeholder="Password" required>
+                    <a class="form-group__link" href="/forgot-pass">Forgot your password?</a>
+                </label>
+                <button class="form-group__btn form-group__btn--gradient" type="submit">Log in</button>
+            </form>
+        </div>
+    </header>
+
+    <main class="app-main">
+        <section class="register-stepper">
+            <h1>StarCompany DESIGNS, MANUFACTURES AND</h1>
+            <h2>Launches Advanced Rockets and Spacecrafts</h2>
+
+            <!-------Register form ------->
+            <form action="" method="post" id="register_form" class="step-slider">
+                <div class="step-slider--inner">
+                    <div class="form-group step-slider__item step-slider__item--active">
+                        <label for="major">Who are you?</label>
+                        <select id="major" name="major" required class="form-group__control">
+                            <option value="" selected>Who are you?</option>
+                            <option value="Engineer">Engineer</option>
+                            <option value="Business Development Executive">Business Development Executive</option>
+                            <option value="Office Manager/PA">Office Manager/PA</option>
+                            <option value="Accountant">Accountant</option>
+                            <option value="VR Designer">VR Designer</option>
+                        </select>
+                        <section class="step-slider__message-block">
+                            <div class="form-group__error"></div>
+                            <p class="form-group__message form-group__message--show"></p>
+                        </section>
+                    </div>
+                    <div class="form-group step-slider__item">
+                        <label for="age">What is your age?</label>
+                        <select id="age" name="age" required class="form-group__control">
+                            <option value="" selected>What is your age?</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                        </select>
+                        <section class="step-slider__message-block">
+                            <div class="form-group__error"></div>
+                            <p class="form-group__message form-group__message--show"></p>
+                        </section>
+                    </div>
+                    <div class="form-group step-slider__item">
+                        <label for="location">I am from</label>
+                        <input type="text" value=""
+                               placeholder="Enter your location" id="location"
+                               class="form-group__control"
+                               required minlength="3">
+                        <section class="step-slider__message-block">
+                            <div class="form-group__error"></div>
+                            <p class="form-group__message form-group__message--show" >E.g.: New Roads or 70760<br>We don’t use postal addresses to contact members directly!</p>
+                        </section>
+                    </div>
+                    <div class="form-group step-slider__item">
+                        <label for="email">Your email address</label>
+                        <input type="email" value="" placeholder="Your email address" id="email"
+                               class="form-group__control" required>
+                        <section class="step-slider__message-block">
+                            <div class="form-group__error"></div>
+                            <p class="form-group__message form-group__message--show"></p>
+                        </section>
+                    </div>
+                    <div class="form-group step-slider__item">
+                        <label for="password">Create your password</label>
+                        <input type="password" value="" placeholder="Enter password"
+                               class="form-group__control"
+                               id="password">
+                        <section class="step-slider__message-block">
+                            <div class="form-group__error"></div>
+                            <p class="form-group__message form-group__message--show">
+                                By clicking the button above you agree to our <a href="/" target="_blank">Terms of Use</a> and
+                                <a href="/" target="_blank">Privacy Policy</a> including use of cookies and to receive
+                                newsletters, account updates and offers sent by StarCompany
+                            </p>
+                        </section>
+                    </div>
+
+                    <ul class="step-slider__navigation">
+                        <li class="step-slider__navigation-prev"></li>
+                        <li class="step-slider__navigation-next">
+                            <button type="button" class="form-group__btn form-group__btn--gradient">Next step</button>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+                <ul class="step-slider__pagination">
+                    <li class="step-slider__pagination__item active"></li>
+                    <li class="step-slider__pagination__item"></li>
+                    <li class="step-slider__pagination__item"></li>
+                    <li class="step-slider__pagination__item"></li>
+                    <li class="step-slider__pagination__item"></li>
+                </ul>
+
+            </form>
+            <!-------- End Register form ------->
+
+        </section>
+    </main>
+    <footer class="footer"></footer>
+</div>
+
+
+<script src="./js/main.js"></script>
+
+</body>
+
+</html>
