@@ -105,16 +105,13 @@ document.addEventListener('DOMContentLoaded', () => {
         submitButtonStyle();
 
         if (currentStep < steps.length - 1) {
-
             // Зміна активного кроку
             currentStep++;
-
             // Додавання/видалення класів для анімації
             steps[currentStep].classList.add('step-slider__item--active');
             steps[currentStep - 1].classList.remove('step-slider__item--active');
 
             steps[currentStep - 1].classList.remove('step-slider__item--control-empty');
-
             emptyControlsListen();
         }
 
@@ -134,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        paginationItems[currentStep].classList.add('active');
+        paginationItems[currentStep].classList.add('--active');
     }
 
     // Функція переходу до минулого кроку
@@ -148,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
             emptyControlsListen();
             submitButtonStyle();
 
-            paginationItems[currentStep + 1].classList.remove('active');
+            paginationItems[currentStep + 1].classList.remove('--active');
         }
     }
 
@@ -182,13 +179,13 @@ document.addEventListener('DOMContentLoaded', () => {
         target.value ? steps[currentStep].classList.remove(clas) : steps[currentStep].classList.add(clas);
     }
 
-
+    // Функція для створення child елементів в пагінації
     function paginationSliderCreate() {
         steps.forEach((step, index) => {
             const paginationItem = document.createElement('li');
             paginationItem.classList.add('step-slider__pagination__item');
             if(index === currentStep) {
-                paginationItem.classList.add('active');
+                paginationItem.classList.add('--active');
             }
 
             pagination.appendChild(paginationItem);
